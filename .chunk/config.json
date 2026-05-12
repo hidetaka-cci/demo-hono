@@ -1,0 +1,17 @@
+{
+  "environment": {
+    "stack": "typescript",
+    "setup": [
+      {
+        "name": "install",
+        "command": "npm install"
+      },
+      {
+        "name": "test",
+        "command": "npm test"
+      }
+    ],
+    "image": "cimg/node",
+    "image_version": "26.1.0"
+  }
+}
