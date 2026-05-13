@@ -1,17 +1,19 @@
 {
-  "environment": {
-    "stack": "typescript",
-    "setup": [
-      {
-        "name": "install",
-        "command": "npm install"
-      },
-      {
-        "name": "test",
-        "command": "npm test"
-      }
-    ],
-    "image": "cimg/node",
-    "image_version": "26.1.0"
+  "commands": [
+    {
+      "name": "install",
+      "run": "npm ci"
+    },
+    {
+      "name": "test",
+      "run": "npm test",
+      "role": "gate",
+      "timeout": 300,
+      "limit": 3
+    }
+  ],
+  "vcs": {
+    "org": "hidetaka-cci",
+    "repo": "demo-hono"
   }
 }
